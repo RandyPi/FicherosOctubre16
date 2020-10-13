@@ -8,36 +8,41 @@ public class Main {
 
 	public static void main(String[] args) {
 	
-	File C = new File ("C:\\Users\\randy\\AccesoADatos");
-	C.mkdir();
 	
-	File Alumno = new File (C, "Alumno.txt");
-	File Alumno_aux = new File (C, "Alumno_aux.txt");
+	//File Alumno_aux = new File (C, "Alumno_aux.txt");
 	
 	String Dni= "";
 	String NPC = "";
+	//Scanner teclado = new Scanner (System.in);
+	//int opcion =0;
 	
 		System.out.println("1 Alta alumnos");
 		System.out.println("2:Bajas de alumnos");
 		System.out.println("3: Modificar alumnos");
 		System.out.println("4: Ver alumno");
 	
-	int seleccion =0;
+	//opcion = teclado.nextInt();
 	
-	switch (seleccion) {
-	case 1: 
+	//switch (opcion) {
+	//case 1: 
 		try {
-			if (Alumno.createNewFile()) {
-				System.out.println("Se ha creado");
-			}else {
+			File C = new File ("C:\\Users\\randy\\AccesoADatos");
+			C.mkdir();
+			File Alumno = new File (C, "Alumno.txt");
+			FileWriter fic = new FileWriter(Alumno);
+			String cadena = "Nuevos alumnos: ";
+			
+			char[] cad = cadena.toCharArray();
+			
+			for (int i = 0; i<cad.length; i++) {
+				fic.write(cad[i]);
 				
-				System.out.println("No se ha podido crear el fichero");
-				
+				fic.append('*');
+				fic.close();
 			}
 			
 		}catch (IOException e) {e.printStackTrace();}
-		
-		break;
+		//break;
 	}
 	
 	
@@ -45,6 +50,6 @@ public class Main {
 	
 		
 	}
-	}
+	
 	
 
