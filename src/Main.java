@@ -31,7 +31,7 @@ public class Main {
 				System.out.println("Se ha creado");
 			}else {
 				
-				System.out.println("No se ha podido crear");
+				System.out.println("No se ha podido crear el fichero");
 				
 			}
 			
