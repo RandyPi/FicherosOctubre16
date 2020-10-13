@@ -11,42 +11,36 @@ public class Main {
 	File C = new File ("C:\\Users\\randy\\AccesoADatos");
 	C.mkdir();
 	
-	File VerAlumno = new File (C, "Veralumnos.txt");
-	File NuevoAlum = new File (C, "Nuevoalumno.txt");
-	File ModAlumno = new File (C, "DatosModificadosdealumnos.txt");
-	String Nombre= "";
-	String Apellidos = "";
-	String Curso = "";
+	File Alumno = new File (C, "Alumno.txt");
+	File Alumno_aux = new File (C, "Alumno_aux.txt");
+	
+	String Dni= "";
+	String NPC = "";
+	
+		System.out.println("1 Alta alumnos");
+		System.out.println("2:Bajas de alumnos");
+		System.out.println("3: Modificar alumnos");
+		System.out.println("4: Ver alumno");
+	
+	int seleccion =0;
+	
+	switch (seleccion) {
+	case 1: 
+		try {
+			if (Alumno.createNewFile()) {
+				System.out.println("Se ha creado");
+			}else {
+				
+				System.out.println("No se ha podido crear");
+				
+			}
+			
+		}catch (IOException e) {e.printStackTrace();}
+		
+		break;
+	}
 	
 	
-	
-	try {
-		if (NuevoAlum.createNewFile()) {
-			System.out.println("Se ha creado");
-		}else {
-			
-			System.out.println("No se ha podido crear");
-			
-		}if (ModAlumno.createNewFile()) {
-			
-			System.out.println("Se ha creado");
-		}else {
-			
-			System.out.println("No se ha podido crear");
-			
-		}if (VerAlumno.createNewFile()) {
-			
-			System.out.println("Se ha creado");
-		}else {
-			System.out.println("No se ha podido crear");
-		}
-		
-		
-		
-
-		
-		
-	}catch (IOException e) {e.printStackTrace();}
 	
 	
 		
